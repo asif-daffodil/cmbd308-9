@@ -1,0 +1,125 @@
+.myDiv {
+    color: brown;
+    background-color: lightblue;
+}
+
+.main {
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.main > .pain {
+    width: 100%;
+    height: 33%;
+    background: red;
+}
+
+.main > .rain {
+    width: 100%;
+    height: 34%;
+    background: yellow;
+}
+
+.abul {
+    width: 300px;
+    height: 200px;
+    background: cornflowerblue;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.abul > .babul {
+    width: 50%;
+    height: 50%;
+}
+
+.abul > .babul:first-child {
+    background: red;
+}
+
+.abul > .babul:nth-child(2) {
+    background: green;
+}
+
+.abul > .babul:nth-child(3) {
+    background: blue;
+}
+
+.abul > .babul:last-child {
+    background: yellow;
+}
+
+.mother {
+    width: 300px;
+    height: 200px;
+    background: lightblue;
+    margin-top: 20px;
+    border: 1px solid black;
+    /* opacity: 0.5; */
+}
+
+.mother > .child {
+    width: 100%;
+    height: 33%;
+    background: lightblue;
+}
+
+/* CSS Hierarchy */
+.mother > .child ~ div {
+    /* width: 100%; */
+    /* height: 33%; */
+    /* background: lightgreen; */
+    text-align: center;
+    line-height: 66px;
+}
+
+/* sibling of child */
+.mother > .child + div {
+    width: 100%;
+    height: 34%;
+    /* background: white; */
+    /* background-color: white; */
+    background-image: url("./sadbg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: rgb(50, 33, 202); */
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* 0123456789abcdef */
+
+.dhaka {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .dhaka{
+        background: red;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .dhaka{
+        background: green;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .dhaka{
+        background: blue;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .dhaka{
+        background: yellow;
+    }
+}

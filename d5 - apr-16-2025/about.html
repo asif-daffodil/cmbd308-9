@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is about page</h1>
+    <nav>
+        <a href="javascript.void(0)" target="" id="home">Home</a>
+        <a href="./about.html">About</a>
+    </nav>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda recusandae atque sint nemo repellat incidunt ipsum neque sunt, placeat, veritatis fuga quasi quidem aspernatur, eaque id! Aperiam tempore rem aspernatur fugiat, facere nisi ab, ducimus adipisci asperiores quaerat sed, minus corporis enim ipsum architecto eius. Facere voluptatum illo modi doloremque!
+    </p>
+    <script>
+        let x = 1;
+        const home = document.getElementById("home");
+        home.addEventListener("click", () => {
+            if(x == 1){
+                home.setAttribute("href", "https://www.google.com");
+                home.setAttribute("target", "_blank");
+                x++;
+            }else if (x == 2){
+                home.setAttribute("href", "https://www.facebook.com");
+                home.setAttribute("target", "_blank");
+                x++;
+            }else if (x == 3){
+                home.setAttribute("href", "https://www.youtube.com");
+                home.setAttribute("target", "_blank");
+                x++;
+            }else if (x == 4){
+                home.setAttribute("href", "index.html");
+                home.setAttribute("target", "");
+                x = 1;
+            }
+        })
+    </script>
+</body>
+</html>

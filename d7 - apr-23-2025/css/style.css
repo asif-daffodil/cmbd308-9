@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "jarina";
+    src: url("../fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+    font-family: "sakhina";
+    src: url("../fonts/Playwrite/PlaywriteAUSA-VariableFont_wght.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "jarina";
+}
+
+.h1 {
+    font-family: "sakhina";
+    animation: heading 2s linear infinite;
+}
+
+.pera1 {
+    color: royalblue;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    line-height: 28px;
+    text-shadow: 5px 5px 5px #f00;
+    text-indent: 100px;
+    width: 600px;
+    /* background: lightblue; */
+    overflow: hidden;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    -webkit-text-stroke: 1px #0f0;
+    /* margin: 20px;
+    margin-top: -20px;
+    margin-right: -20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin: auto;
+    margin: 0 auto;
+    margin: 0px 20px 0px 20px;
+    margin: 10px 15px 20px; */
+    margin-bottom: 20px;
+}
+
+.main {
+    width: max-content;
+    padding: 20px;
+    margin: 20px auto;
+    /* border-width: 20px;
+    border-style: groove;
+    border-color: blue; */
+    /* border: 2px solid #000; */
+    border-radius: 6px;
+    border-width: 20px;
+    border-style: solid;
+    border-image: url("../images/other-border.png") 30 round;
+    box-shadow: 10px 10px 10px #000, -10px -10px 10px #000, 0px 0px 40px #000 inset;
+
+}
+
+@keyframes heading {
+    0% {
+        color: red;
+    }
+    50% {
+        color: blue;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.cityList {
+    list-style: none;
+    list-style-position: inside;
+}
+
+.cityList > li {
+    line-height: 24px;
+    font-size: 18px;
+    display: flex;
+    gap: 4px;
+    justify-content: start;
+    align-items: center;
+}
+
+.cityList > li > img {
+    height: 18px;
+}
+
+/* 
+a {
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #0f0;
+} 
+*/
+
+a > button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-width: 0;
+    background: #000;
+    color: #fff;
+    border-radius: 20px/50%;
+    transition: 0.5s;
+}
+
+a > button:hover {
+    background: linear-gradient(to top right, #f00, #0f0);
+    font-size: 22px;
+}

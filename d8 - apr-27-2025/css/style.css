@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    background: lightcoral;
+    width: max-content;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+p, h1 {
+    display: inline-block;
+    background: lightblue;
+    padding: 20px;
+    margin-left: auto;
+    width: 200px;
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/alom.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 72px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+}
+
+.hero > div {
+    transform: translateY(200%);
+}
+
+.hero > div > span {
+    color: #ff0000;
+}
+
+.main {
+    width: 300px;
+    height: 200px;
+    background: green;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pain {
+    width: 140px;
+    height: 140px;
+    background: red;
+    border-radius: 50%;
+    /* margin: auto; */
+}
+
+.bd {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.dhk {
+    width: 33%;
+    height: 70%;
+    background: cornflowerblue;
+}
+
+.ctg {
+    width: 33%;
+    height: 70%;
+    background: hotpink;
+}
+
+.dhaka {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.dhanmondi {
+    width: 100%;
+    height: 100%;
+    background: lightgreen;
+}
+
+.jigatola {
+    width: 100%;
+    height: 100%;
+    background: lightyellow;
+}
+
+.gulshan {
+    width: 100%;
+    height: 100%;
+    background: lightpink;
+}
+
+.banani {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+}
