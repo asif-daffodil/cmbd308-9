@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.camera > div > img {
+    max-width: 440px;
+    max-height: 414px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.camera > div > button {
+    width: max-content;
+    padding: 10px 20px;
+    animation: btnTxt 2s infinite;
+}
+
+@keyframes btnTxt {
+    0% {
+        color: #f00;
+    }
+    50% {
+        color: #00f;
+    }
+    100% {
+        color: #f00;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .main {
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+
+    .main > div {
+        border: 1px solid #000;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px #000;
+    }
+
+    .camera {
+        display: flex;
+        padding: 20px;
+    }
+
+    .camera > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 1020px) {
+    .main {
+        display: grid;
+        padding: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+    }
+
+    .main > div {
+        border: 1px solid #000;
+        border-radius: 6px;
+        padding: 16px;
+        box-shadow: 0 0 8px #000;
+    }
+
+    .camera {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 16px;
+    }
+
+    .camera > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 12px;
+        grid-gap: 12px;
+    }
+
+    .main > div {
+        border: 1px solid #000;
+        border-radius: 4px;
+        padding: 12px;
+        box-shadow: 0 0 6px #000;
+    }
+
+    .camera {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 12px;
+    }
+
+    .camera > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;   
+}
+
+.rocket {
+    height: 200px;
+    position: absolute;
+    bottom: 6px;
+    left: 100px;
+    animation: rocket 10s infinite ease-in-out;
+}
+
+@keyframes rocket {
+    0% {
+        bottom: -50%;
+    }
+    10% {
+        bottom: 0%;
+    }
+    50% {
+        bottom: 0%;
+    }
+    100% {
+        bottom: 100%;
+    }
+    
+}

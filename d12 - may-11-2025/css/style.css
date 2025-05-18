@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-flow {
+    height: 100vh;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    flex-flow: row no-wrap;
+    padding: 20px;
+    gap: 20px;
+    justify-content: start;
+    /* align-items: center; */
+    align-content: center;
+}
+
+.flex-flow > div {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("../images/chotonam.jpeg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    width: 30%;
+    /* height: 200px; */
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    padding: 20px;
+}
+
+/* .flex-flow > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.flex-flow > div:first-child {
+    flex-grow: 1;
+    /* order */
+    order: 2;
+}
+
+.flex-flow > div:nth-child(2) {
+    order: 1;
+    flex-shrink: 0;
+}
+
+.flex-flow > div:nth-child(3) {
+    order: 3;
+    flex-basis: 200px;
+}
+
+.flex-flow > div:nth-child(4) {
+    order: 4;
+}
+
+
+
+/* Flexbox Axes */
+
+/**
+ * display: flex;
+ * display: block;
+ * display: grid;
+ * display: inline;
+ * display: table;
+ * display: inline-block;
+ * display: inline-flex;
+ * display: inline-grid;
+ * display: inline-table;
+*/
+
+.display-table {
+    display: inline-table;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* flex Child Properties */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    /* place-items: center; */
+    /* flex-direction: column; */
+}
+
+.pain {
+    width: 100px;
+    height: 100px;
+    background: #0f0;
+    /* align-self: last baseline; */
+    /* margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto; */
+    margin: auto;
+}
