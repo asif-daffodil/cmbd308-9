@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 onmouseover="changeHeading()" onmouseout="document.getElementsByTagName('h1')[0].textContent = 'Hello Students!'">This is Heading</h1>
+    <h3 id="myDiv"></h3>
+    <div class="myClass"></div>
+    <div class="myClass"></div>
+    <div class="myClass"></div>
+
+    <script>
+        document.getElementById("myDiv").innerHTML = "Hello World!";
+        document.getElementsByClassName("myClass")[0].innerText = "Hello Bangladesh";
+        document.getElementsByClassName("myClass")[1].innerText = "Hello BD";
+        document.getElementsByClassName("myClass")[2].innerText = "Hello Dhaka";
+        document.getElementsByTagName("h1")[0].textContent = "Hello Students!";
+        document.querySelector(".myClass")
+        document.querySelectorAll(".myClass")[2]
+
+        function changeHeading() {
+            document.getElementsByTagName("h1")[0].textContent = "How are you!";
+        }
+
+        document.getElementById("myDiv").addEventListener("mouseover", () => {
+            document.getElementById("myDiv").textContent  = "Hello Universe!";
+        });
+
+        document.getElementById("myDiv").addEventListener("mouseout", () => {
+            document.getElementById("myDiv").textContent = "Hello World!";
+        });
+
+        document.getElementsByClassName("myClass")[0].addEventListener("click", () => {
+            if(document.getElementsByClassName("myClass")[0].innerText == "Hello Bangladesh"){
+                document.getElementsByClassName("myClass")[0].innerText = "Hello Bd"
+            }else{
+                document.getElementsByClassName("myClass")[0].innerText = "Hello Bangladesh"
+            }
+        })
+    </script>
+</body>
+</html>
