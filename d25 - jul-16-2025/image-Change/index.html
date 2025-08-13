@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <img src="./bandar.jpg" alt="" id="img">
+        <br><br>
+        <button id="cox">Cox Bazar</button>
+        <button id="ban">Bandarban</button>
+        <br><br>
+        <div id="slogan">Tumi ke? ami ke?</div>
+    </center>
+
+    <script>
+        const img = document.getElementById("img");
+        const cox = document.getElementById("cox");
+        const ban = document.getElementById("ban");
+
+        cox.addEventListener("click", () => {
+            img.src = "./cox.jpg";
+        });
+
+        ban.addEventListener("click", () => {
+            img.src = "./bandar.jpg";
+        })
+
+        const slogan = document.getElementById("slogan");
+
+        slogan.addEventListener("mouseover", () => {
+            slogan.textContent = "Bangladesh! Bangladesh!";
+        });
+
+        slogan.addEventListener("mouseout", () => {
+            slogan.textContent = "Tumi ke? ami ke?"
+        })
+
+    </script>
+</body>
+</html>

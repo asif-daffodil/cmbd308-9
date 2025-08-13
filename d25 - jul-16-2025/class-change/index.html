@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="rain">
+            <div class="pain" id="ok"></div>
+            <div>
+                <button id="blue">Blue</button>
+                <button id="green">Green</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ok = document.getElementById("ok");
+        const blue = document.getElementById("blue");
+        const green = document.getElementById("green");
+
+        /*
+        blue.addEventListener("click", () => {
+            ok.classList.add("bg-primary");
+            ok.classList.remove("bg-success");
+        })
+
+        green.addEventListener("click", () => {
+            ok.classList.add("bg-success");
+            ok.classList.remove("bg-primary")
+        })
+        */
+
+        blue.addEventListener("click", () => {
+            ok.className = "pain bg-primary";
+        })
+
+        green.addEventListener("click", () => {
+            ok.className = "pain bg-success";
+        })
+
+    </script>
+</body>
+</html>

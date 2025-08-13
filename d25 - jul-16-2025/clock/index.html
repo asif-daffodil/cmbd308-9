@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="date"></div>
+    <div id="time"></div>
+
+    <script>
+        const date = document.getElementById("date");
+        const time = document.getElementById("time");
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+        const showTime = () => {
+            const d = new Date();
+            date.textContent = d.getDate() + "/" + months[d.getMonth()] + "/" + d.getFullYear();
+            time.textContent = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        }
+
+        showTime();
+
+        setInterval(showTime, 1000);
+    </script>
+</body>
+</html>

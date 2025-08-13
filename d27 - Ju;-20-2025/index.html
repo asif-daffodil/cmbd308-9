@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <ul class="flex bg-gray-300">
+            <li class="w-full"><a href=""
+                    class="block text-center leading-[40px] hover:bg-black hover:text-white">Home</a></li>
+            <li class="w-full relative group">
+                <a href=""
+                    class="flex gap-1 justify-center align-middle text-center leading-[40px] hover:bg-black hover:text-white group">
+                    About
+                    <span
+                        class="transform origin-center block transition-all duration-200 ease-linear rotate-0 group-hover:rotate-180">⋎</span>
+                </a>
+                <ul class="w-full grid grid-cols-1 absolute top-16 left-0 bg-black list-none transition-all duration-500 group-hover:top-10 invisible opacity-0 group-hover:visible group-hover:opacity-100">
+                    <li><a href="" class="text-white text-center block leading-[30px] hover:bg-gray-700">Our History</a>
+                    </li>
+                    <li><a href="" class="text-white text-center block leading-[30px] hover:bg-gray-700">Our Team</a>
+                    </li>
+                    <li><a href="" class="text-white text-center block leading-[30px] hover:bg-gray-700">Our
+                            Motivation</a></li>
+                </ul>
+            </li>
+            <li class="w-full"><a href=""
+                    class="block text-center leading-[40px] hover:bg-black hover:text-white">Gallery</a></li>
+            <li class="w-full"><a href=""
+                    class="block text-center leading-[40px] hover:bg-black hover:text-white">Contact</a></li>
+            <li class="w-full"><a href=""
+                    class="block text-center leading-[40px] hover:bg-black hover:text-white">Blog</a></li>
+        </ul>
+        <div
+            class="w-96 border rounded shadow shadow-red-600 min-h-5 p-10 my-5 cursor-pointer text-center text-4xl bg-amber-600 text-white hover:bg-orange-600 hover:shadow-lg">
+            Hello World</div>
+        <form action="https://google.com/search" method="get"
+            class="border w-96 rounded shadow shadow-stone-600 p-4 flex mb-3">
+            <input type="text" placeholder="Search..."
+                class="border border-gray-600 w-full h-10 px-2 rounded-l outline-none" name="q">
+            <button type="submit"
+                class="w-28 border  h-10 rounded-r border-black border-l-0 cursor-pointer hover:bg-black hover:text-white">Search</button>
+        </form>
+
+        <table class="table-fixed border-collapse border border-gray-400 w-full">
+            <thead>
+                <tr class="text-left bg-gray-300">
+                    <th class="border border-gray-400 p-2">SN</th>
+                    <th class="border border-gray-400 p-2">Name</th>
+                    <th class="border border-gray-400 p-2">Gender</th>
+                    <th class="border border-gray-400 p-2">City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hover:bg-gray-200">
+                    <td class="border border-gray-400 p-2">1</td>
+                    <td class="border border-gray-400 p-2">John Doe</td>
+                    <td class="border border-gray-400 p-2">Male</td>
+                    <td class="border border-gray-400 p-2">New York</td>
+                </tr>
+                <tr class="hover:bg-gray-200">
+                    <td class="border border-gray-400 p-2">2</td>
+                    <td class="border border-gray-400 p-2">Jane Smith</td>
+                    <td class="border border-gray-400 p-2">Female</td>
+                    <td class="border border-gray-400 p-2">Los Angeles</td>
+                </tr>
+                <tr class="hover:bg-gray-200">
+                    <td class="border border-gray-400 p-2">3</td>
+                    <td class="border border-gray-400 p-2">Sam Brown</td>
+                    <td class="border border-gray-400 p-2">Male</td>
+                    <td class="border border-gray-400 p-2">Chicago</td>
+                </tr>
+                <tr class="hover:bg-gray-200">
+                    <td class="border border-gray-400 p-2">4</td>
+                    <td class="border border-gray-400 p-2">Lisa White</td>
+                    <td class="border border-gray-400 p-2">Female</td>
+                    <td class="border border-gray-400 p-2">Houston</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
