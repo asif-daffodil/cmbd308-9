@@ -6,6 +6,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
+<script>
+// Disable right-click
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+// Disable Ctrl+U, Ctrl+Shift+I, Ctrl+S, Ctrl+C, F12
+document.addEventListener('keydown', function(e) {
+    if (
+        (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S' || e.key === 'c' || e.key === 'C')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) ||
+        (e.key === 'F12')
+    ) {
+        e.preventDefault();
+    }
+});
+</script>
+</head>
 <body>
     <div class="container">
         <img src="./images/rocket.webp" alt="" class="rocket">

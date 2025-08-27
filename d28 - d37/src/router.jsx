@@ -5,6 +5,9 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Blog from "./Pages/Blog";
 import Gallery from "./Components/Gallery";
+import SinglePost from "./Components/BlogCompo/SinglePost";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 
 const router = createBrowserRouter([
@@ -31,6 +34,18 @@ const router = createBrowserRouter([
         {
             path: '/gallery',
             element: <Gallery />
+        },
+        {
+            path: '/blog/:id',
+            element: <SinglePost />
+        }, 
+        {
+            path: '/sign-in',
+            element: <SignIn />
+        },
+        {
+            path: '/sign-up',
+            element: <SignUp />
         }
     ]
   }

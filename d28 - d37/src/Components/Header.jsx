@@ -1,4 +1,6 @@
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
 import { NavLink, useNavigate } from "react-router";
+import auth from "../firebase";
 
 
 const Header = () => {
@@ -8,6 +10,8 @@ const Header = () => {
         navigate("/gallery");
     }
 
+    const [checkUser] = useAuthState(auth);
+    const [signOut] = useSignOut(auth);
     return (
         <header className="text-gray-600 body-font">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -22,6 +26,15 @@ const Header = () => {
                     <NavLink to="/about" className={({isActive}) => isActive ? "mr-5 text-gray-900":"mr-5 hover:text-gray-700"}>About US</NavLink>
                     <NavLink to="/contact" className={({isActive}) => isActive ? "mr-5 text-gray-900":"mr-5 hover:text-gray-700" }>Contact</NavLink>
                     <NavLink to="/blog" className={({isActive}) => isActive ? "mr-5 text-gray-900":"mr-5 hover:text-gray-700" }>Blog</NavLink>
+                    {!checkUser && (
+                        <>
+                            <NavLink to="/sign-in" className={({isActive}) => isActive ? "mr-5 text-gray-900":"mr-5 hover:text-gray-700" }>Sign In</NavLink>
+                            <NavLink to="/sign-up" className={({isActive}) => isActive ? "mr-5 text-gray-900":"mr-5 hover:text-gray-700" }>Sign Up</NavLink>
+                        </>
+                    )}
+                    {checkUser && (
+                        <button className="mr-5 hover:text-gray-700 cursor-pointer" onClick={signOut}>Logout</button>
+                    )}
                 </nav>
                 <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" onClick={handleCLick} >Gallery
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
