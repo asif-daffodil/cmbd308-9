@@ -1,0 +1,63 @@
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
+import { Link, NavLink, useNavigate } from "react-router";
+import auth from "../firebase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faCity } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+
+
+const Header = () => {
+    const navigate = useNavigate();
+
+    const handleCLick = () => {
+        navigate("/gallery");
+    }
+
+    const [checkUser] = useAuthState(auth);
+    const [signOut] = useSignOut(auth);
+    const [showNav, setShowNav] = useState(`hidden`);
+    const toggleNav = () => {
+        if (showNav == `hidden`) {
+            setShowNav(`block`);
+        }else{
+            setShowNav(`hidden`);
+        }
+    }
+    return (
+        <header className="text-gray-600 body-font">
+            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-start">
+                <div className="flex justify-between items-center w-full md:w-auto mb-4 md:mb-0">
+                    <Link to="/" className="flex title-font font-medium items-center text-gray-900">
+                        <FontAwesomeIcon icon={faCity} className="text-blue-600" />
+                        <span className="ml-3 text-xl">Cmbd2025</span>
+                    </Link>
+                    <button className="border-2 p-1 rounded-md cursor-pointer md:hidden" onClick={toggleNav}>
+                        <FontAwesomeIcon icon={faBars} />
+                    </button>
+                </div>
+                <nav className={`md:ml-auto flex flex-wrap flex-col md:flex-row md:items-center text-base justify-center ${showNav} md:block`}>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "mr-5 text-gray-900" : "mr-5 hover:text-gray-700"}>Home</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? "mr-5 text-gray-900" : "mr-5 hover:text-gray-700"}>About US</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? "mr-5 text-gray-900" : "mr-5 hover:text-gray-700"}>Contact</NavLink>
+                    <NavLink to="/blog" className={({ isActive }) => isActive ? "mr-5 text-gray-900" : "mr-5 hover:text-gray-700"}>Blog</NavLink>
+                    {!checkUser && (
+                        <>
+                            <NavLink to="/sign-in" className={({ isActive }) => isActive ? "mr-5 text-gray-900" : "mr-5 hover:text-gray-700"}>Sign In</NavLink>
+                            <NavLink to="/sign-up" className={({ isActive }) => isActive ? "mr-5 text-gray-900" : "mr-5 hover:text-gray-700"}>Sign Up</NavLink>
+                        </>
+                    )}
+                    {checkUser && (
+                        <button className="mr-5 hover:text-gray-700 cursor-pointer pl-0 text-left" onClick={signOut}>Logout</button>
+                    )}
+                    <button className="inline-flex items-center border-0 py-1 px-0 focus:outline-none rounded text-base cursor-pointer" onClick={handleCLick} >Gallery
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </header>
+    );
+};
+
+export default Header;
